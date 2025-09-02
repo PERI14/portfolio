@@ -1,0 +1,35 @@
+/* Simple responsive CSS - no frameworks */
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --accent: #2b6bf6;
+  --muted: #6b7280;
+  --maxw: 1000px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:#111}
+.site{display:flex;flex-direction:column;min-height:100vh}
+.hero{background:linear-gradient(90deg, rgba(43,107,246,0.08), rgba(124,92,255,0.06));padding:48px 16px;text-align:center}
+.hero-inner{max-width:var(--maxw);margin:0 auto}
+.hero h1{font-size:2.1rem;margin:0}
+.role{color:var(--muted);margin-top:6px}
+.summary{max-width:720px;margin:12px auto;color:var(--muted)}
+.cta{margin-top:16px;display:flex;gap:10px;justify-content:center}
+.btn{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn.muted{background:#e6eefc;color:var(--accent);border:1px solid rgba(43,107,246,0.12)}
+.container{max-width:var(--maxw);margin:24px auto;padding:0 16px;flex:1}
+.card{background:var(--card);padding:18px;border-radius:12px;margin-bottom:18px;box-shadow:0 4px 18px rgba(16,24,40,0.06)}
+.skills{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.skills li{background:#f1f5f9;padding:8px 12px;border-radius:8px;color:#0f172a}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.project{padding:12px;border-radius:8px;border:1px solid #eef2f7;background:#fff}
+.project .tech{color:var(--muted);font-size:0.9rem;margin:6px 0}
+.footer{text-align:center;padding:18px 0;color:var(--muted);font-size:0.95rem}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+  .hero{padding:28px 12px}
+  .hero h1{font-size:1.5rem}
+  .cta{flex-direction:column}
+}
